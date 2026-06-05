@@ -1,541 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Scoopia Cafe & Creamery</title>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#f4f6fb;
-color:#222;
-overflow-x:hidden;
-}
-
-/* HERO */
-
-.hero{
-background:
-linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35)),
-url('hero_mobile.png');
-background-size:cover;
-background-position:center center;
-background-repeat:no-repeat;
-min-height:100vh;
-display:flex;
-align-items:flex-end;
-justify-content:center;
-text-align:center;
-padding:40px 20px 90px;
-position:relative;
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-color:#fff;
-max-width:700px;
-}
-
-@media(max-width:768px){
-
-.hero{
-min-height:100vh;
-background-size:cover;
-background-position:center center;
-padding:40px 20px 100px;
-}
-
-.hero-logo{
-width:110px;
-}
-
-.hero h1{
-font-size:2.3rem;
-}
-
-.hero p{
-font-size:1rem;
-}
-
-.btn{
-width:100%;
-max-width:320px;
-min-width:auto;
-}
-
-.about-wrap{
-grid-template-columns:1fr;
-}
-
-.title{
-font-size:2rem;
-}
-
-.contact-logo{
-width:280px;
-max-width:90%;
-}
-
-}
-
-.hero p{
-font-size:1.2rem;
-line-height:1.6;
-margin-bottom:30px;
-text-shadow:0 2px 8px rgba(0,0,0,.6);
-}
-
-.hero-buttons{
-display:flex;
-gap:15px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-padding:20px;
-color:#fff;
-}
-
-.hero-logo{
-width:170px;
-max-width:80%;
-margin-bottom:15px;
-}
-
-.hero h1{
-font-size:3rem;
-line-height:1.1;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:1.4rem;
-margin-bottom:25px;
-line-height:1.6;
-}
-
-.hero-buttons{
-display:flex;
-gap:15px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:25px;
-}
-
-.btn{
-display:inline-block;
-min-width:220px;
-padding:16px 28px;
-border-radius:60px;
-text-decoration:none;
-font-weight:700;
-font-size:1.1rem;
-color:#fff;
-border:none;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-transition:all .3s ease;
-}
-
-.btn:hover{
-transform:translateY(-4px) scale(1.03);
-box-shadow:0 15px 30px rgba(0,0,0,.35);
-}
-
-.whatsapp-btn{
-background:linear-gradient(135deg,#25D366,#18b955);
-}
-
-.call-btn{
-background:linear-gradient(135deg,#ff5fb2,#e63f98);
-}
-
-.whatsapp-btn{
-background:#25D366;
-}
-
-.call-btn{
-background:#f04aa1;
-}
-
-/* SECTION */
-
-.section{
-padding:70px 20px;
-max-width:1200px;
-margin:auto;
-}
-
-.title{
-text-align:center;
-font-size:2.4rem;
-color:#0d47a1;
-margin-bottom:40px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-
-.card img{
-width:100%;
-display:block;
-}
-
-.card h3{
-padding:15px;
-text-align:center;
-color:#0d47a1;
-}
-
-/* ABOUT */
-
-.about{
-background:white;
-padding:70px 20px;
-}
-
-.about-wrap{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.about img{
-width:100%;
-border-radius:20px;
-}
-
-.about h2{
-font-size:2rem;
-color:#0d47a1;
-margin-bottom:20px;
-}
-
-.about p{
-line-height:1.9;
-font-size:1.05rem;
-}
-
-/* MENU BANNER */
-
-.menu-banner{
-padding:30px 15px;
-background:#fff;
-}
-
-.menu-banner img{
-width:100%;
-border-radius:20px;
-display:block;
-}
-
-/* FEATURES */
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.feature{
-background:white;
-padding:25px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.feature h3{
-color:#0d47a1;
-margin-bottom:10px;
-}
-
-/* CONTACT */
-
-.contact{
-background:#174aa9;
-color:white;
-text-align:center;
-padding:50px 20px;
-}
-
-.contact-logo{
-width:220px;
-max-width:80%;
-margin-bottom:25px;
-}
-
-.address{
-font-size:1.2rem;
-line-height:1.7;
-margin-bottom:25px;
-}
-
-.contact-buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-/* FOOTER */
-
-footer{
-background:#0a2f73;
-text-align:center;
-color:white;
-padding:25px 15px;
-}
-
-@media(max-width:768px){
-
-footer h3{
-font-size:1.4rem;
-}
-
-/* FLOATING */
-
-.whatsapp-float{
-position:fixed;
-right:20px;
-bottom:20px;
-width:70px;
-height:70px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:32px;
-text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
-z-index:999;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero{
-    min-height:700px;
-    background-size:100% auto;
-    background-position:center top;
-}
-
-.hero-logo{
-    width:120px;
-}
-
-.hero h1{
-    font-size:2.2rem;
-}
-
-}
-
-.hero p{
-font-size:1rem;
-}
-
-.about-wrap{
-grid-template-columns:1fr;
-}
-
-.title{
-font-size:2rem;
-}
-
-.btn{
-min-width:190px;
-}
-
-.contact-logo{
-width:280px;
-max-width:90%;
-}
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoopia Cafe & Creamery</title>
+    
+    <!-- Premium Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* BRAND VARIABLES & RESET */
+        :root {
+            --primary-blue: #0d47a1;
+            --dark-blue: #0a2f73;
+            --brand-pink: #ff4081;
+            --brand-pink-hover: #f50057;
+            --whatsapp-green: #25D366;
+            --whatsapp-green-hover: #128C7E;
+            --bg-light: #f8fafd;
+            --text-dark: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg-light);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .btn {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(10, 47, 115, 0.4), rgba(10, 47, 115, 0.75)), url('hero_mobile.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .hero-content {
+            z-index: 2;
+            color: #fff;
+            max-width: 800px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-logo {
+            width: 180px;
+            max-width: 70%;
+            margin-bottom: 20px;
+            filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.3));
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            font-weight: 500;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            letter-spacing: 0.5px;
+        }
+
+        /* BUTTONS */
+        .hero-buttons, .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-width: 220px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #fff;
+            border: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+        }
+
+        .whatsapp-btn {
+            background: var(--whatsapp-green);
+        }
+        .whatsapp-btn:hover {
+            background: var(--whatsapp-green-hover);
+        }
+
+        .call-btn {
+            background: var(--brand-pink);
+        }
+        .call-btn:hover {
+            background: var(--brand-pink-hover);
+        }
+
+        /* SECTIONS GENERAL */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        /* FLAVOUR CARDS GRID */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(13, 71, 161, 0.06);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(13, 71, 161, 0.03);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(13, 71, 161, 0.12);
+        }
+
+        .card-img-wrapper {
+            width: 100%;
+            overflow: hidden;
+            background: #fdf8f5;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            padding: 20px;
+            text-align: center;
+            color: var(--dark-blue);
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            background: white;
+            padding: 90px 20px;
+            border-top: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .about-wrap {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img-wrapper img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .about h2 {
+            font-size: 2.4rem;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* MENU BANNER PROMO */
+        .menu-banner {
+            padding: 40px 20px;
+            background: var(--bg-light);
+            max-width: 1140px;
+            margin: auto;
+        }
+
+        .menu-banner img {
+            width: 100%;
+            border-radius: 24px;
+            display: block;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+        }
+
+        /* CAFE SPECIALITIES FEATURES */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .feature {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(13, 71, 161, 0.04);
+            border: 1px solid rgba(13, 71, 161, 0.02);
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(13, 71, 161, 0.08);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .feature h3 {
+            color: var(--dark-blue);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #777;
+            font-size: 0.95rem;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .contact-logo {
+            width: 200px;
+            max-width: 70%;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        }
+
+        .address {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-weight: 400;
+            opacity: 0.95;
+            letter-spacing: 0.3px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #061f4d;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 30px 15px;
+            font-size: 0.95rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        footer h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        /* STICKY WHATSAPP FLOATING BUTTON */
+        .whatsapp-float {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 65px;
+            height: 65px;
+            background: var(--whatsapp-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: var(--whatsapp-green-hover);
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE RESPONSIVENESS (MOBILE OPTIMIZATION) */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 80vh;
+                padding: 80px 20px 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                margin-bottom: 25px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 340px;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .about-wrap {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                text-align: center;
+            }
+
+            .about h2 {
+                font-size: 1.8rem;
+            }
+
+            .contact-logo {
+                width: 170px;
+            }
+            
+            .address {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<section class="hero">
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="logonew_scoopia.png" class="hero-logo" alt="Scoopia Logo">
+            <h1>Scoopia Cafe & Creamery</h1>
+            <p>Ice Cream • Kulfi • Sundaes • Pizza • Burgers • Coffee • Shakes</p>
+            
+            <div class="hero-buttons">
+                <a href="https://wa.me/917796631555" class="btn whatsapp-btn" target="_blank">
+                    <span>💬</span> WhatsApp Order
+                </a>
+                <a href="tel:+917796631555" class="btn call-btn">
+                    <span>📞</span> Call Us
+                </a>
+            </div>
+        </div>
+    </section>
 
-<div class="hero-content">
+    <!-- SIGNATURE FLAVOURS -->
+    <section class="section">
+        <h2 class="title">Our Signature Flavours</h2>
+        <div class="section-subtitle">Handcrafted premium scoops filled with absolute happiness</div>
+        
+        <div class="cards">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="paan_new.png" alt="Paan Supreme">
+                </div>
+                <h3>Paan Supreme</h3>
+            </div>
 
-<img src="logonew_scoopia.png" class="hero-logo">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="jamunfamily_new.png" alt="Jamun Magic">
+                </div>
+                <h3>Jamun Magic</h3>
+            </div>
 
-<h1>Scoopia Cafe & Creamery</h1>
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="kpista_new.png" alt="Kesar Pista Kulfi">
+                </div>
+                <h3>Kesar Pista Kulfi</h3>
+            </div>
+        </div>
+    </section>
 
-<p>
-Ice Cream • Kulfi • Sundaes • Pizza • Burgers • Coffee • Shakes
-</p>
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <div class="about-wrap">
+            <div class="about-img-wrapper">
+                <img src="dpnew_scoopia.png" alt="About Scoopia">
+            </div>
+            <div>
+                <h2>Welcome To Scoopia</h2>
+                <p>Scoopia Cafe & Creamery offers premium ice creams, kulfis, sundaes, shakes, burgers, pizzas and coffee under one roof.</p>
+                <p>From Paan Supreme to Jamun Magic and Kesar Pista Kulfi, every single flavour is crafted meticulously to deliver true happiness in every scoop.</p>
+            </div>
+        </div>
+    </section>
 
-<div class="hero-buttons">
+    <!-- BANNER POSTER SECTION -->
+    <section class="menu-banner">
+        <img src="Poster_scoopia.png" alt="Scoopia Menu Poster">
+    </section>
 
-<a href="https://wa.me/917796631555" class="btn whatsapp-btn">
-💬 WhatsApp Order
-</a>
+    <!-- CAFE SPECIALITIES -->
+    <section class="section">
+        <h2 class="title">Cafe Specialities</h2>
+        <div class="section-subtitle">Not just ice creams, explore our delicious hot & cold bites!</div>
+        
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">🍕</span>
+                <h3>Pizza</h3>
+                <p>Freshly baked & loaded with cheesy goodness.</p>
+            </div>
 
-<a href="tel:+917796631555" class="btn call-btn">
-📞 Call Us
-</a>
+            <div class="feature">
+                <span class="feature-icon">🍔</span>
+                <h3>Burgers</h3>
+                <p>Premium toasted buns stuffed with juicy goodness.</p>
+            </div>
 
-</div>
+            <div class="feature">
+                <span class="feature-icon">☕</span>
+                <h3>Coffee</h3>
+                <p>Aromatic hot brews & refreshing cold coffee options.</p>
+            </div>
 
-</div>
+            <div class="feature">
+                <span class="feature-icon">🥤</span>
+                <h3>Shakes</h3>
+                <p>Rich, creamy and thick refreshing shakes.</p>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <!-- CONTACT & LOCATION -->
+    <section class="contact">
+        <img src="logonew_scoopia.png" class="contact-logo" alt="Scoopia Logo">
+        <div class="address">
+            📍 Shop No. 1, Near Canal Road,<br>
+            Opp. Maqsudan Bypass, GT Road, Jalandhar
+        </div>
+        
+        <div class="contact-buttons">
+            <a href="tel:+917796631555" class="btn call-btn">
+                <span>📞</span> Call Us
+            </a>
+            <a href="https://wa.me/917796631555" class="btn whatsapp-btn" target="_blank">
+                <span>💬</span> WhatsApp Order
+            </a>
+        </div>
+    </section>
 
-<section class="section">
+    <!-- FOOTER -->
+    <footer>
+        <h3>Every Scoop, Every Smile</h3>
+        <p>© 2026 Scoopia Cafe & Creamery. All Rights Reserved.</p>
+    </footer>
 
-<h2 class="title">Our Signature Flavours</h2>
-
-<div class="cards">
-
-<div class="card">
-<img src="paan_new.png">
-<h3>Paan Supreme</h3>
-</div>
-
-<div class="card">
-<img src="jamunfamily_new.png">
-<h3>Jamun Magic</h3>
-</div>
-
-<div class="card">
-<img src="kpista_new.png">
-<h3>Kesar Pista Kulfi</h3>
-</div>
-
-</div>
-
-</section>
-
-<section class="about">
-
-<div class="about-wrap">
-
-<div>
-<img src="dpnew_scoopia.png">
-</div>
-
-<div>
-
-<h2>Welcome To Scoopia</h2>
-
-<p>
-Scoopia Cafe & Creamery offers premium ice creams, kulfis, sundaes, shakes, burgers, pizzas and coffee under one roof.
-</p>
-
-<br>
-
-<p>
-From Paan Supreme to Jamun Magic and Kesar Pista Kulfi, every flavour is crafted to deliver happiness in every scoop.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="menu-banner">
-
-<img src="Poster_scoopia.png">
-
-</section>
-
-<section class="section">
-
-<h2 class="title">Cafe Specialities</h2>
-
-<div class="features">
-
-<div class="feature">
-<h3>🍕 Pizza</h3>
-<p>Fresh & cheesy pizzas.</p>
-</div>
-
-<div class="feature">
-<h3>🍔 Burgers</h3>
-<p>Loaded premium burgers.</p>
-</div>
-
-<div class="feature">
-<h3>☕ Coffee</h3>
-<p>Hot & cold coffee options.</p>
-</div>
-
-<div class="feature">
-<h3>🥤 Shakes</h3>
-<p>Refreshing thick shakes.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="contact">
-
-<img src="logonew_scoopia.png" class="contact-logo">
-
-<div class="address">
-📍 Shop No. 1, Near Canal Road,<br>
-Opp. Maqsudan Bypass, GT Road, Jalandhar
-</div>
-
-<div class="contact-buttons">
-
-<a href="tel:+917796631555" class="btn call-btn">
-📞 Call Us
-</a>
-
-<a href="https://wa.me/917796631555" class="btn whatsapp-btn">
-💬 WhatsApp Order
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-<h3>Every Scoop, Every Smile</h3>
-
-<p>© 2026 Scoopia Cafe & Creamery</p>
-
-</footer>
-
-<a href="https://wa.me/917796631555" class="whatsapp-float">
-💬
-</a>
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/917796631555" class="whatsapp-float" target="_blank" title="Order on WhatsApp">
+        💬
+    </a>
 
 </body>
 </html>
