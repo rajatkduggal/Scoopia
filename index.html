@@ -41,55 +41,49 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(rgba(10, 47, 115, 0.4), rgba(10, 47, 115, 0.75)), url('hero_mobile.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 90vh;
+        /* NEW HERO CONTAINER - NO OVERLAP */
+        .hero-container {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            background: white;
+        }
+
+        /* BANNER IMAGE ONLY - CLEAR VIEW */
+        .hero-banner-only {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        /* TEXT AND BUTTONS MOVED BELOW THE BANNER */
+        .hero-below-content {
+            padding: 40px 20px;
             text-align: center;
-            padding: 60px 20px;
-            position: relative;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            animation: fadeInUp 0.6s ease;
         }
 
-        .hero-content {
-            z-index: 2;
-            color: #fff;
-            max-width: 800px;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .hero-logo {
-            width: 180px;
-            max-width: 70%;
-            margin-bottom: 20px;
-            filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.3));
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
+        .hero-below-content h1 {
+            font-size: 2.5rem;
             font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 15px;
-            text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            color: var(--dark-blue);
+            margin-bottom: 10px;
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 35px;
+        .hero-below-content p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 25px;
             font-weight: 500;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-            letter-spacing: 0.5px;
         }
 
-        /* BUTTONS */
+        /* BUTTONS STYLING */
         .hero-buttons, .contact-buttons {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -99,21 +93,21 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            min-width: 220px;
-            padding: 16px 32px;
+            min-width: 200px;
+            padding: 14px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.05rem;
+            font-size: 1rem;
             color: #fff;
             border: none;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
         }
 
         .btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
         .whatsapp-btn {
@@ -132,25 +126,24 @@
 
         /* SECTIONS GENERAL */
         .section {
-            padding: 80px 20px;
+            padding: 70px 20px;
             max-width: 1200px;
             margin: auto;
         }
 
         .title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             font-weight: 700;
             color: var(--dark-blue);
-            margin-bottom: 15px;
-            position: relative;
+            margin-bottom: 10px;
         }
 
         .section-subtitle {
             text-align: center;
             color: #666;
-            margin-bottom: 50px;
-            font-size: 1.1rem;
+            margin-bottom: 40px;
+            font-size: 1.05rem;
         }
 
         /* FLAVOUR CARDS GRID */
@@ -177,7 +170,6 @@
         .card-img-wrapper {
             width: 100%;
             overflow: hidden;
-            background: #fdf8f5;
         }
 
         .card img {
@@ -195,15 +187,14 @@
             padding: 20px;
             text-align: center;
             color: var(--dark-blue);
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 600;
         }
 
         /* ABOUT SECTION */
         .about {
             background: white;
-            padding: 90px 20px;
-            border-top: 1px solid rgba(0,0,0,0.02);
+            padding: 80px 20px;
         }
 
         .about-wrap {
@@ -211,34 +202,33 @@
             margin: auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 40px;
             align-items: center;
         }
 
         .about-img-wrapper img {
             width: 100%;
             border-radius: 24px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
         }
 
         .about h2 {
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             color: var(--dark-blue);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-weight: 700;
         }
 
         .about p {
             color: #555;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.8;
             margin-bottom: 15px;
         }
 
         /* MENU BANNER PROMO */
         .menu-banner {
-            padding: 40px 20px;
-            background: var(--bg-light);
+            padding: 30px 20px;
             max-width: 1140px;
             margin: auto;
         }
@@ -247,41 +237,41 @@
             width: 100%;
             border-radius: 24px;
             display: block;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
 
         /* CAFE SPECIALITIES FEATURES */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            gap: 20px;
         }
 
         .feature {
             background: white;
-            padding: 35px 25px;
+            padding: 30px 20px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 8px 25px rgba(13, 71, 161, 0.04);
+            box-shadow: 0 6px 20px rgba(13, 71, 161, 0.03);
             border: 1px solid rgba(13, 71, 161, 0.02);
             transition: all 0.3s ease;
         }
 
         .feature:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(13, 71, 161, 0.08);
+            box-shadow: 0 10px 25px rgba(13, 71, 161, 0.06);
         }
 
         .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            font-size: 2.3rem;
+            margin-bottom: 12px;
             display: inline-block;
         }
 
         .feature h3 {
             color: var(--dark-blue);
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
         }
 
         .feature p {
@@ -294,24 +284,20 @@
             background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
             color: white;
             text-align: center;
-            padding: 80px 20px;
-            position: relative;
+            padding: 70px 20px;
         }
 
         .contact-logo {
-            width: 200px;
+            width: 180px;
             max-width: 70%;
-            margin-bottom: 30px;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+            margin-bottom: 25px;
         }
 
         .address {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             line-height: 1.8;
-            margin-bottom: 40px;
-            font-weight: 400;
+            margin-bottom: 35px;
             opacity: 0.95;
-            letter-spacing: 0.3px;
         }
 
         /* FOOTER */
@@ -321,93 +307,61 @@
             color: rgba(255, 255, 255, 0.7);
             padding: 30px 15px;
             font-size: 0.95rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
         }
 
         footer h3 {
             color: white;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-bottom: 8px;
-            font-weight: 600;
         }
 
         /* STICKY WHATSAPP FLOATING BUTTON */
         .whatsapp-float {
             position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 65px;
-            height: 65px;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
             background: var(--whatsapp-green);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 26px;
             text-decoration: none;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             z-index: 999;
             transition: all 0.3s ease;
         }
 
         .whatsapp-float:hover {
             transform: scale(1.1);
-            background: var(--whatsapp-green-hover);
         }
 
-        /* ANIMATIONS */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* RESPONSIVE RESPONSIVENESS (MOBILE OPTIMIZATION) */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
-            .hero {
-                min-height: 80vh;
-                padding: 80px 20px 60px;
-            }
-
-            .hero h1 {
-                font-size: 2.4rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-                margin-bottom: 25px;
+            .hero-below-content h1 {
+                font-size: 2rem;
             }
 
             .btn {
                 width: 100%;
-                max-width: 340px;
+                max-width: 320px;
             }
 
             .title {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .about-wrap {
                 grid-template-columns: 1fr;
-                gap: 35px;
+                gap: 30px;
                 text-align: center;
-            }
-
-            .about h2 {
-                font-size: 1.8rem;
-            }
-
-            .contact-logo {
-                width: 170px;
-            }
-            
-            .address {
-                font-size: 1.1rem;
             }
         }
     </style>
@@ -415,12 +369,15 @@
 
 <body>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <img src="logonew_scoopia.png" class="hero-logo" alt="Scoopia Logo">
+    <!-- NEW FIXED HERO - NO OVERLAPPING -->
+    <div class="hero-container">
+        <!-- Pure Banner Image, Nothing covers it -->
+        <img src="hero_mobile.png" class="hero-banner-only" alt="Scoopia Menu Banner">
+        
+        <!-- Text & Action Buttons shifted safely below -->
+        <div class="hero-below-content">
             <h1>Scoopia Cafe & Creamery</h1>
-            <p>Ice Cream • Kulfi • Sundaes • Pizza • Burgers • Coffee • Shakes</p>
+            <p>Every Scoop, Every Smile • Fresh & Cold Desserts</p>
             
             <div class="hero-buttons">
                 <a href="https://wa.me/917796631555" class="btn whatsapp-btn" target="_blank">
@@ -431,7 +388,7 @@
                 </a>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- SIGNATURE FLAVOURS -->
     <section class="section">
