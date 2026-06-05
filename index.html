@@ -41,7 +41,7 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* NEW HERO CONTAINER - NO OVERLAP */
+        /* HERO CONTAINER */
         .hero-container {
             display: flex;
             flex-direction: column;
@@ -49,7 +49,6 @@
             background: white;
         }
 
-        /* BANNER IMAGE ONLY - CLEAR VIEW */
         .hero-banner-only {
             width: 100%;
             max-width: 100%;
@@ -57,7 +56,6 @@
             height: auto;
         }
 
-        /* TEXT AND BUTTONS MOVED BELOW THE BANNER */
         .hero-below-content {
             padding: 40px 20px;
             text-align: center;
@@ -279,24 +277,26 @@
             font-size: 0.95rem;
         }
 
-        /* CONTACT SECTION */
+        /* CONTACT SECTION - FIXED SPACE AND BIGGER LOGO */
         .contact {
             background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
             color: white;
             text-align: center;
-            padding: 70px 20px;
+            padding: 35px 20px; /* Reduced vertical space */
         }
 
         .contact-logo {
-            width: 180px;
-            max-width: 70%;
-            margin-bottom: 25px;
+            width: 400px; /* Made desktop logo much bigger */
+            max-width: 85%; /* Keeps it scalable on mobiles */
+            height: auto;
+            margin: 0 auto 20px; /* Tight space below logo */
+            display: block;
         }
 
         .address {
             font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 35px;
+            line-height: 1.7;
+            margin-bottom: 25px; /* Reduced space below address */
             opacity: 0.95;
         }
 
@@ -305,14 +305,14 @@
             background: #061f4d;
             text-align: center;
             color: rgba(255, 255, 255, 0.7);
-            padding: 30px 15px;
+            padding: 25px 15px;
             font-size: 0.95rem;
         }
 
         footer h3 {
             color: white;
             font-size: 1.25rem;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         /* STICKY WHATSAPP FLOATING BUTTON */
@@ -363,18 +363,31 @@
                 gap: 30px;
                 text-align: center;
             }
+
+            .contact {
+                padding: 30px 15px; /* Extra tight padding on mobile devices */
+            }
+
+            .contact-logo {
+                width: 320px; /* Perfectly large on mobile screens */
+                max-width: 90%;
+                margin-bottom: 15px;
+            }
+
+            .address {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- NEW FIXED HERO - NO OVERLAPPING -->
+    <!-- HERO CONTAINER -->
     <div class="hero-container">
-        <!-- Pure Banner Image, Nothing covers it -->
         <img src="hero_mobile.png" class="hero-banner-only" alt="Scoopia Menu Banner">
         
-        <!-- Text & Action Buttons shifted safely below -->
         <div class="hero-below-content">
             <h1>Scoopia Cafe & Creamery</h1>
             <p>Every Scoop, Every Smile • Fresh & Cold Desserts</p>
@@ -470,7 +483,7 @@
         </div>
     </section>
 
-    <!-- CONTACT & LOCATION -->
+    <!-- CONTACT & LOCATION SECTION (UPDATED FOR SPACING & LOGO SIZE) -->
     <section class="contact">
         <img src="logonew_scoopia.png" class="contact-logo" alt="Scoopia Logo">
         <div class="address">
