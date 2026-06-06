@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scoopia Cafe & Creamery</title>
+    <meta name="description" content="Scoopia Cafe & Creamery - Premium Ice Creams, Kulfis, Burgers, Pizzas & Coffee in Jalandhar. Every Scoop, Every Smile!">
+    <title>Scoopia Cafe & Creamery | Premium Desserts & Cafe</title>
 
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- Premium Fonts Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         /* BRAND VARIABLES & RESET */
         :root {
@@ -24,6 +24,10 @@
             --whatsapp-green-hover: #128C7E;
             --bg-light: #f8fafd;
             --text-dark: #2c3e50;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         * {
@@ -57,34 +61,36 @@
             max-width: 100%;
             display: block;
             height: auto;
+            object-fit: cover;
         }
 
         .hero-below-content {
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             background: white;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            animation: fadeInUp 0.6s ease;
+            animation: fadeInUp 0.8s ease-out;
         }
 
         .hero-below-content h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
             color: var(--dark-blue);
             margin-bottom: 10px;
+            letter-spacing: -0.5px;
         }
 
         .hero-below-content p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: #555;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             font-weight: 500;
         }
 
         /* BUTTONS STYLING */
         .hero-buttons, .contact-buttons {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -93,22 +99,22 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            min-width: 200px;
-            padding: 14px 28px;
+            gap: 12px;
+            min-width: 220px;
+            padding: 15px 30px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: #fff;
             border: none;
             box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
         }
 
         .whatsapp-btn {
@@ -127,31 +133,31 @@
 
         /* SECTIONS GENERAL */
         .section {
-            padding: 70px 20px;
+            padding: 80px 20px;
             max-width: 1200px;
             margin: auto;
         }
 
         .title {
             text-align: center;
-            font-size: 2.3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--dark-blue);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .section-subtitle {
             text-align: center;
             color: #666;
-            margin-bottom: 40px;
-            font-size: 1.05rem;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
         }
 
         /* FLAVOUR CARDS GRID */
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
         }
 
         .card {
@@ -159,13 +165,14 @@
             border-radius: 24px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(13, 71, 161, 0.06);
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             border: 1px solid rgba(13, 71, 161, 0.03);
+            cursor: pointer;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(13, 71, 161, 0.12);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(13, 71, 161, 0.15);
         }
 
         .card-img-wrapper {
@@ -177,25 +184,25 @@
             width: 100%;
             height: auto;
             display: block;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
 
         .card:hover img {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
 
         .card h3 {
-            padding: 20px;
+            padding: 25px;
             text-align: center;
             color: var(--dark-blue);
-            font-size: 1.25rem;
-            font-weight: 600;
+            font-size: 1.3rem;
+            font-weight: 700;
         }
 
         /* ABOUT SECTION */
         .about {
             background: white;
-            padding: 80px 20px;
+            padding: 100px 20px;
         }
 
         .about-wrap {
@@ -203,33 +210,33 @@
             margin: auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 50px;
             align-items: center;
         }
 
         .about-img-wrapper img {
             width: 100%;
             border-radius: 24px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
         }
 
         .about h2 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: var(--dark-blue);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-weight: 700;
         }
 
         .about p {
             color: #555;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             line-height: 1.8;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         /* MENU BANNER PROMO */
         .menu-banner {
-            padding: 30px 20px;
+            padding: 60px 20px;
             max-width: 1140px;
             margin: auto;
         }
@@ -238,127 +245,165 @@
             width: 100%;
             border-radius: 24px;
             display: block;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
         }
 
         /* CAFE SPECIALITIES FEATURES */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
         }
 
         .feature {
             background: white;
-            padding: 30px 20px;
+            padding: 40px 25px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 6px 20px rgba(13, 71, 161, 0.03);
+            box-shadow: 0 8px 25px rgba(13, 71, 161, 0.04);
             border: 1px solid rgba(13, 71, 161, 0.02);
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
         }
 
         .feature:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(13, 71, 161, 0.06);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(13, 71, 161, 0.1);
+            background: linear-gradient(to bottom, #ffffff, #f8fafd);
         }
 
         .feature-icon {
-            font-size: 2.3rem;
-            margin-bottom: 12px;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
             display: inline-block;
         }
 
         .feature h3 {
             color: var(--dark-blue);
-            font-size: 1.2rem;
-            margin-bottom: 8px;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
         }
 
         .feature p {
             color: #777;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            line-height: 1.5;
         }
 
-        /* CONTACT SECTION - FIXED SPACE AND BIGGER LOGO */
+        /* CONTACT SECTION */
         .contact {
             background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
             color: white;
             text-align: center;
-            padding: 35px 20px; /* Reduced vertical space */
+            padding: 60px 20px; 
         }
 
         .contact-logo {
-            width: 400px; /* Made desktop logo much bigger */
-            max-width: 85%; /* Keeps it scalable on mobiles */
+            width: 400px;
+            max-width: 85%;
             height: auto;
-            margin: 0 auto 20px; /* Tight space below logo */
+            margin: 0 auto 30px; 
             display: block;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
         }
 
         .address {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            margin-bottom: 25px; /* Reduced space below address */
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 35px; 
             opacity: 0.95;
         }
 
-footer{
-background:linear-gradient(135deg,#ff69b4,#ff1493);
-text-align:center;
-color:#081f5c;
-padding:25px 15px;
-}
+        /* FOOTER */
+        footer {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            text-align: center;
+            color: white;
+            padding: 30px 15px;
+        }
 
-footer h3{
-color:#081f5c;
-font-size:1.25rem;
-margin-bottom:5px;
-font-weight:700;
-}
+        footer h3 {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
 
-footer p{
-color:#081f5c;
-font-weight:600;
-}
+        footer p {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
 
-footer a{
-color:#081f5c;
-font-weight:600;
-text-decoration:none;
-}
-        /* STICKY WHATSAPP FLOATING BUTTON */
-        .whatsapp-float {
+        .social-follow {
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .social-follow p {
+            font-size: 1.2rem;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .social-follow a {
+            color: var(--brand-pink);
+            font-weight: 700;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .social-follow a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* FLOATING SOCIAL BUTTONS (Organized Spacing) */
+        .floating-btn {
             position: fixed;
             right: 20px;
-            bottom: 20px;
             width: 60px;
             height: 60px;
-            background: var(--whatsapp-green);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 26px;
+            font-size: 28px;
+            color: #fff;
             text-decoration: none;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             z-index: 999;
             transition: all 0.3s ease;
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
+        .floating-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        .whatsapp-float {
+            bottom: 20px;
+            background: var(--whatsapp-green);
+        }
+
+        .instagram-float {
+            bottom: 95px;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        .facebook-float {
+            bottom: 170px;
+            background: #1877F2;
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .hero-below-content h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .btn {
@@ -367,60 +412,46 @@ text-decoration:none;
             }
 
             .title {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
             .about-wrap {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 40px;
                 text-align: center;
             }
 
             .contact {
-                padding: 30px 15px; /* Extra tight padding on mobile devices */
+                padding: 50px 15px;
             }
 
             .contact-logo {
-                width: 320px; /* Perfectly large on mobile screens */
+                width: 320px;
                 max-width: 90%;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
             }
 
             .address {
                 font-size: 1.1rem;
-                margin-bottom: 20px;
+                margin-bottom: 25px;
             }
-        }
-    
-.instagram-float{
-position:fixed;right:20px;bottom:95px;width:60px;height:60px;
-background:#E1306C;border-radius:50%;display:flex;
-align-items:center;justify-content:center;text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,.3);z-index:999;color:#fff;font-size:28px;
-}
-.facebook-float{
-position:fixed;right:20px;bottom:170px;width:60px;height:60px;
-background:#1877F2;border-radius:50%;display:flex;
-align-items:center;justify-content:center;text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,.3);z-index:999;color:#fff;font-size:28px;
-}
-.social-follow{
-margin-top:25px;
-}
-.social-follow a{
-color:#081f5c;
-font-weight:700;
-text-decoration:none;
-margin:0 10px;
-}
 
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+            /* Slightly scale down floating buttons on very small screens to avoid clutter */
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                right: 15px;
+            }
+            .whatsapp-float { bottom: 15px; }
+            .instagram-float { bottom: 80px; }
+            .facebook-float { bottom: 145px; }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- HERO CONTAINER -->
     <div class="hero-container">
         <img src="hero_mobile.png" class="hero-banner-only" alt="Scoopia Menu Banner">
         
@@ -433,13 +464,12 @@ margin:0 10px;
                     <span><i class="fab fa-whatsapp"></i></span> WhatsApp Order
                 </a>
                 <a href="tel:+917796631555" class="btn call-btn">
-                    <span>📞</span> Call Us
+                    <span><i class="fas fa-phone-alt"></i></span> Call Us
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- SIGNATURE FLAVOURS -->
     <section class="section">
         <h2 class="title">Our Signature Flavours</h2>
         <div class="section-subtitle">Handcrafted premium scoops filled with absolute happiness</div>
@@ -447,14 +477,14 @@ margin:0 10px;
         <div class="cards">
             <div class="card">
                 <div class="card-img-wrapper">
-                    <img src="paan_new.png" alt="Paan Supreme">
+                    <img src="paan_new.png" alt="Paan Supreme Ice Cream">
                 </div>
                 <h3>Paan Supreme</h3>
             </div>
 
             <div class="card">
                 <div class="card-img-wrapper">
-                    <img src="jamunfamily_new.png" alt="Jamun Magic">
+                    <img src="jamunfamily_new.png" alt="Jamun Magic Dessert">
                 </div>
                 <h3>Jamun Magic</h3>
             </div>
@@ -474,11 +504,10 @@ margin:0 10px;
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section class="about">
         <div class="about-wrap">
             <div class="about-img-wrapper">
-                <img src="dpnew_scoopia.png" alt="About Scoopia">
+                <img src="dpnew_scoopia.png" alt="About Scoopia Cafe & Creamery">
             </div>
             <div>
                 <h2>Welcome To Scoopia</h2>
@@ -488,12 +517,10 @@ margin:0 10px;
         </div>
     </section>
 
-    <!-- BANNER POSTER SECTION -->
     <section class="menu-banner">
         <img src="Poster_scoopia.png" alt="Scoopia Menu Poster">
     </section>
 
-    <!-- CAFE SPECIALITIES -->
     <section class="section">
         <h2 class="title">Cafe Specialities</h2>
         <div class="section-subtitle">Not just ice creams, explore our delicious hot & cold bites!</div>
@@ -525,7 +552,6 @@ margin:0 10px;
         </div>
     </section>
 
-    <!-- CONTACT & LOCATION SECTION (UPDATED FOR SPACING & LOGO SIZE) -->
     <section class="contact">
         <img src="logonew_scoopia.png" class="contact-logo" alt="Scoopia Logo">
         <div class="address">
@@ -535,27 +561,22 @@ margin:0 10px;
         
         <div class="contact-buttons">
             <a href="tel:+917796631555" class="btn call-btn">
-                <span>📞</span> Call Us
+                <span><i class="fas fa-phone-alt"></i></span> Call Us
             </a>
             <a href="https://wa.me/917796631555" class="btn whatsapp-btn" target="_blank">
-                <span>💬</span> WhatsApp Order
+                <span><i class="fab fa-whatsapp"></i></span> WhatsApp Order
             </a>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <h3>Every Scoop, Every Smile</h3>
         <p>© 2026 Scoopia Cafe & Creamery. All Rights Reserved.</p>
     </footer>
 
-    <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/917796631555" class="whatsapp-float" target="_blank" title="Order on WhatsApp">
-        💬
-    </a>
+    <a href="https://www.facebook.com/" class="floating-btn facebook-float" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/scoopiaicecream/" class="floating-btn instagram-float" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/917796631555" class="floating-btn whatsapp-float" target="_blank" title="Order on WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-
-<a href="https://www.facebook.com/" class="facebook-float" target="_blank"><i class="fab fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/scoopiaicecream/" class="instagram-float" target="_blank"><i class="fab fa-instagram"></i></a>
 </body>
 </html>
